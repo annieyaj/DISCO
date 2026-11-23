@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<robot name="dummy">
+  <link name="bottom_wall">
+    <visual>
+      <origin xyz="0.0 0.0 0.1550332992715287" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="bottom_wall.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.1550332992715287" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="bottom_wall.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="left_wall">
+    <visual>
+      <origin xyz="0.0 -0.1696760440861371 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="vertical_wall.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.1696760440861371 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="vertical_wall.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="right_wall">
+    <visual>
+      <origin xyz="0.0 0.1696760440861371 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="vertical_wall.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.1696760440861371 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="vertical_wall.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="back_wall">
+    <visual>
+      <origin xyz="0.13168019599144715 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="back_wall.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.13168019599144715 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="back_wall.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="top_wall">
+    <visual>
+      <origin xyz="0.0 0.0 0.5790954190399793" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="top_wall.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.5790954190399793" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="top_wall.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_wall_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="bottom_wall"/>
+    <child link="left_wall"/>
+  </joint>
+
+  <joint name="right_wall_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="bottom_wall"/>
+    <child link="right_wall"/>
+  </joint>
+
+  <joint name="back_wall_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="bottom_wall"/>
+    <child link="back_wall"/>
+  </joint>
+
+  <joint name="top_wall_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="bottom_wall"/>
+    <child link="top_wall"/>
+  </joint>
+
+</robot>

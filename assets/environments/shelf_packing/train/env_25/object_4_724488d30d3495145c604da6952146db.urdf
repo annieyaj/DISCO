@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot name="dummy">
+  <material name="random_material">
+    <color rgba="0.634 0.959 0.206 1.0"/>
+  </material>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="assets/acronym_objects/724488d30d3495145c604da6952146db/model_repositioned_vhacd.obj" scale="0.000265585 0.000265585 0.000265585"/>
+      </geometry>
+      <material name="random_material"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="assets/acronym_objects/724488d30d3495145c604da6952146db/model_repositioned_vhacd.obj" scale="0.000265585 0.000265585 0.000265585"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
